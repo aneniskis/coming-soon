@@ -1,4 +1,5 @@
 /* base*/
+
 @import '../base/base.css';
 @import '../base/layout.css';
 
@@ -9,3 +10,11 @@
 @import '../components/button.css';
 
 /* custom style goes below this comment  */
+/* .hero {
+    background-color: var(--primary-color) ;
+    padding: var(--big);  pavyzdziai
+}
+.footer {
+    background-color: var(--primary-color) ;
+    padding: var(--small);    pavyzdziai 
+} */
