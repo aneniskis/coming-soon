@@ -1,0 +1,53 @@
+/* base*/
+
+@import '../base/base.css';
+@import '../base/layout.css';
+
+
+/*3rd-praty*/
+
+/* components */
+@import '../components/button.css';
+
+/* custom style goes below this comment  */
+/* .hero {
+    background-color: var(--primary-color) ;
+    padding: var(--big);  pavyzdziai
+}
+.footer {
+    background-color: var(--primary-color) ;
+    padding: var(--small);    pavyzdziai 
+} */
+.hero {
+    text-align: center;
+    min-height:100vh;
+    color: #fff;
+    background-image: url(../../img/hero-background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.hero  .logo {
+    margin-bottom: 40px;
+    width: 100%;
+    height: 50px;
+    object-fit: contain;
+    object-position: center;
+}
+.hero .title {
+    margin-bottom: 20px;
+    color: #333;
+    text-transform: uppercase;
+    font-size: 50px;
+}
+.hero .description {
+    margin-bottom: 60px;
+    color: #555;
+    font-size: 20px;
+}
+.hero .clock {
+    margin-bottom: 60px;
+}
+.hero .form {
+    margin-bottom: 10px;
+}
