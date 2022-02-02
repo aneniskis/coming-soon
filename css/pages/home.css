@@ -8,6 +8,8 @@
 
 /* components */
 @import '../components/button.css';
+@import '../components/clock.css';
+@import '../components/progress-bar.css';
 
 /* custom style goes below this comment  */
 /* .hero {
@@ -26,6 +28,12 @@
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+}
+.hero >.row-short {
+    display: flex;
+    flex-direction:column;   /* rowas ir columas kaip ziurisi */
+    justify-content: center; /*  hoerizonraliai ir col vertikaliai */
+    align-items: center;     /* row vertikaliai ir col horizontaliai  */
 }
 .hero  .logo {
     margin-bottom: 40px;
@@ -51,3 +59,33 @@
 .hero .form {
     margin-bottom: 10px;
 }
+.main-content >.row {
+    display: flex;
+    justify-content: space-between;
+}
+.main-content .column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.main-content .column-left {
+    width: 50%;
+}
+.main-content .column-right {
+    width: 40%;
+}
+.main-content .column a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+.main-content .column a:hover {
+    text-decoration: underline ;
+    color: var(--secondary-color);
+}
+/* .progress-bar:nth-of-type(2) .bar {
+    width: 75%;
+}
+.progress-bar:nth-of-type(3) .bar {
+    width: 55%;
+} */
+/* pavyzdys bet jis siuo atveju netinka  */
