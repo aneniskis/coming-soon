@@ -1,0 +1,45 @@
+.mouse {
+    font-size: 25px;;
+    width: 0.9em;
+    height:1.7em;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 0.8em;
+    position:relative;
+}
+.mouse::before {
+    content: '';
+    width: 0.14em;
+    height: 0.19em;
+    background-color: #fff;
+    position: absolute;
+    /* top: 10%; */
+    top: 0.2em;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* transform: translateX(-50%); */
+    border-radius: 0.08em;
+    animation-name: scrolint;
+    animation-duration: 2s;
+    animation-iteration-count: 20;
+}
+
+@keyframes scrolint {
+    0% {
+        top: 0.2em;
+        opacity: 1;
+    }
+    35%{ 
+        top: 0.6em;
+        opacity: 0.7;
+    }
+    70%{
+        top:1.0em;
+        opacity: 0.3;
+        background-color: red;
+    }
+    100% { 
+        top: 1.4em;
+        opacity: 0;
+    }
+}
