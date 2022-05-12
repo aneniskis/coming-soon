@@ -5,9 +5,15 @@
 
 
 /*3rd-praty*/
+@import '../3rd-party/font-awesome.min.css';
 
 /* components */
 @import '../components/button.css';
+@import '../components/clock.css';
+@import '../components/form.css';
+@import '../components/mouse.css';
+@import '../components/progress-bar.css';
+
 
 /* custom style goes below this comment  */
 /* .hero {
@@ -26,6 +32,12 @@
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+}
+.hero >.row-short {
+    display: flex;
+    flex-direction:column;   /* rowas ir columas kaip ziurisi */
+    justify-content: center; /*  hoerizonraliai ir col vertikaliai */
+    align-items: center;     /* row vertikaliai ir col horizontaliai  */
 }
 .hero  .logo {
     margin-bottom: 40px;
@@ -50,4 +62,149 @@
 }
 .hero .form {
     margin-bottom: 10px;
+}
+.hero .form > input {
+    /* background-color: transparent; */
+    color:#fff;
+    border-color: #fff;
+
+}
+.hero .form > input::placeholder{
+    color: #fff;
+}
+.hero .form .btn {
+    margin: 0 auto;
+}
+.main-content >.row {
+    display: flex;
+    justify-content: space-between;
+}
+.main-content .column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.main-content .column-left {
+    width: 50%;
+}
+.main-content .column-right {
+    width: 40%;
+}
+.main-content .column a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+.main-content .column a:hover {
+    text-decoration: underline ;
+    color: var(--secondary-color);
+}
+.main-content .form .btn {
+    margin-left: auto;
+    margin-top: 30px;
+}
+@media (min-width:1101px){
+    .main-content .form > input {
+        width: 45%;
+    }
+
+}
+@media (max-width: 900px) {
+    .main-content > .row {
+        flex-direction: column;
+        gap: 60px;
+    }
+    .main-content .column {
+        width: 100%;
+    }
+}
+
+/* .progress-bar:nth-of-type(2) .bar {
+    width: 75%;
+}
+.progress-bar:nth-of-type(3) .bar {
+    width: 55%;
+} */
+/* pavyzdys bet jis siuo atveju netinka  */
+.footer {
+    padding-top: 0;
+    text-align: center;
+    color: #fff8;
+    font-size: 14px;
+
+}
+.footer >.row{
+    display: flex;
+    justify-content: center;
+    gap:20px;
+    border-bottom: 3px solid white;
+    padding: 20px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.footer .icon {
+    color:white;
+    text-decoration: none;
+    font-size: 20px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    transition: all 0.2s;
+
+}
+.footer .icon:hover {
+    color: var(--primary-color);
+    background-color: #fff;
+    text-decoration: none;
+}
+.footer a {
+    text-decoration: none;
+    color: #fff;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+.footer .logo {
+    height: 45px;
+    margin-bottom: 40px;
+}
+.footer .bottom-trio {
+    display: flex;
+    justify-content: center;
+    gap: 0 20px;
+}
+.footer .bottom-trio > p {
+    position: relative;
+}
+.footer .bottom-trio > p::before {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 10px;
+    background-color: #fff8;
+    position: absolute;
+    top: 50%;
+    left: -10%;
+    transform: translate(-50%, -50%);
+
+}
+.footer .bottom-trio > p:first-of-type::before {
+    display: none;
+
+}
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+
+@media (max-width:700px) {
+    .footer .bottom-trio {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .footer .bottom-trio > p::before {
+        display: none;
+}
 }
